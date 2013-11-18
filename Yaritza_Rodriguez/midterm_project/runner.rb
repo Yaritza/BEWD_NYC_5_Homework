@@ -6,7 +6,7 @@ puts "Hello and welcome to  Organic Index, powered by Reddit! \nHere you can sea
 \nWhat would you like to search? (Kindly exclude symbols e.g: #, !,@, etc from your search)"
 
 user_imput = gets.chomp
-puts "Okay, lets look for posts related to the term(s): #{user_imput}"
+puts "\nOkay, lets look for posts related to the term(s): #{user_imput} \n \n"
 
 listing = Posts.new(user_imput)
 

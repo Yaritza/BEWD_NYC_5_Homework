@@ -27,7 +27,7 @@
             end
 
               if results.empty?
-                puts "***Oh! Disculpa... There are no matches at this time.\nPlease try another search, or check us out at a diffent time. \nIf you'd like to further explore Organic Index, try searching for the word milk.***"
+                puts "****Oh! Disculpa.****\nThere are no matches at this time.\nPlease try another search, or check us out at a diffent time. \nIf you'd like to further explore Organic Index, try searching for the word milk.\n**********************"
             end
         end
       end
