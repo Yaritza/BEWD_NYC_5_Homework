@@ -1,13 +1,21 @@
+<div>
+    <center>
+
+        <h1>Welcome to RetFlix!</h1>
+        <h2>See our collection of movies below.</h2>
+             <br></br>
+
+          <%= form_tag '/search',  method: :get do %>
+          <%= label_tag 'q', "Search" %>
+          <%= text_field_tag 'q' %>
+          <%= submit_tag 'Search' %>
+          <% end %>
+
+    </center>
+</div>
+
+<br></br>
 
 <div>
-<h1>Welcome to RetFlix!</h1>
-<h2>See our collection of movies below.</h2>
+<%= render 'movies' %>
 </div>
-<br></br>
- <% @movie.each do |movie| %>
-     <dl>
-       <h2><dt><%= movie.title %>, <%= movie.year_released %>:</dt></h2>
-       <h3><dd><%= movie.description %>.</dd></h3>
-       <br></br>
-     </dl>
-   <% end %>
