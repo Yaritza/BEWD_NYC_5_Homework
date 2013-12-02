@@ -6,7 +6,7 @@ class SearchController < ApplicationController
                                       #can reference q with 'q' or :q
     #search for movies by name and description by q
     #Show the results to the user
-    @movies= Movie.where('name LIKE :query OR description LIKE :query OR year_released LIKE :query',
+    @movies= Movie.where('title LIKE :query OR description LIKE :query OR year_released LIKE :query',
                         query: "%#{query}%")
 
 end
