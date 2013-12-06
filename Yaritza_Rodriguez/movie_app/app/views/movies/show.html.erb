@@ -1,7 +1,20 @@
 <h2>
-<%= @movie.title %>
-<%= @movie.description %>
-<%= @movie.year_released %>
+<br></br>
+    <dl>
+           <h2><dt><%= @movie.title.upcase %>, <%= @movie.year_released %>:</dt></h2>
+           <h3><dd><%= @movie.description %>.</dd></h3>
+           <h2><dd>RATING:<%= @movie.rating %> out of 5 stars.</dd></h2>
+
+      </dl>
+
+<br></br>
+
+<center>
 
 <p><%= link_to "EDIT MOVIE", edit_movie_path(@movie) %></p>
+<p><%=link_to "RETURN TO HOME PAGE", root_path %></p>
+
+</center>
+
 </h2>
+

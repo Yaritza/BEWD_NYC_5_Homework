@@ -1,7 +1,11 @@
 <% @movies.each do |movie| %>
+<div>
      <dl>
        <h2><dt><%= movie.title %>, <%= movie.year_released %>:</dt></h2>
        <h3><dd><%= movie.description %>.</dd></h3>
-       <p><%= link_to "Show", movie %></p>
+       <h3><dd>Rating: <%= movie.rating %> out of 5 stars.</dd></h3>
+       <h3><%= link_to "Show this movie.", movie %></h3>
       </dl>
+      <br></br>
+  </div>
 <% end %>

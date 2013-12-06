@@ -13,7 +13,7 @@ class MoviesController < ApplicationController
 
     def create
        # raise params[:movie].inspect
-        safe_movie = params.require(:movie).permit(:title, :description, :year_released)
+        safe_movie = params.require(:movie).permit(:title, :description, :year_released, :rating)
         @movies = Movie.create safe_movie
         redirect_to @movies
     end
@@ -28,7 +28,7 @@ class MoviesController < ApplicationController
 
    def update
      @movies = Movie.find params[:id]
-      safe_movie = params.require(:movie).permit(:title, :description, :year_released)
+      safe_movie = params.require(:movie).permit(:title, :description, :year_released, :rating)
      @movies.update safe_movie
 
      redirect_to @movies

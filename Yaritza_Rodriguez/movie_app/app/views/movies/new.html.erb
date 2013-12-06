@@ -1,26 +1,30 @@
 <center>
+    <h1>
 
-    <div>
-        <h1>ADD A MOVIE</h1>
-    </div>
+      <div>
+          ADD A MOVIE
+      </div>
 
-    <div>
+      <br></br>
 
-
+      <div>
          <%= form_for @movies do |f|  %>
-         <h2>
           <%= f.label :title %>
           <%= f.text_field :title %>
           <%= f.label :description %>
           <%= f.text_field :description %>
           <%= f.label :year_released %>
           <%= f.text_field :year_released %>
-      </h2>
-
-      <h1><%= f.submit %></h1>
+          <%= f.label :rating %>
+          <%= f.text_field :rating %>
+  <br></br>
+          <%= f.submit %>
           <% end %>
+      </div>
 
+    <div>
+          <p><%=link_to "RETURN TO HOME PAGE", root_path %></p>
     </div>
 
-</center>
-
+    </h1>
+  </center>
