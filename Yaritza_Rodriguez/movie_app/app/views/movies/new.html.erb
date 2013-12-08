@@ -1,3 +1,16 @@
+<% if @movie.errors.any? do %>
+
+  <h2>There were errors saving your movie</h2>
+
+    <ul>
+    <% @movie.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+
+<% end %>
+<% end %>
+
 <center>
     <h1>
 
@@ -8,7 +21,7 @@
       <br></br>
 
       <div>
-         <%= form_for @movies do |f|  %>
+         <%= form_for @movie do |f|  %>
           <%= f.label :title %>
           <%= f.text_field :title %>
           <%= f.label :description %>

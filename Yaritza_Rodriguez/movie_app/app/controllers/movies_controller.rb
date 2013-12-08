@@ -8,12 +8,12 @@ class MoviesController < ApplicationController
     end
 
     def new
-        @movies = Movie.new
+        @movie = Movie.new
     end
 
     def create
 
-       raise params[:movie].inspect
+       # params[:movie].inspect
 
         safe_movie = params.require(:movie).permit(:title, :description, :year_released, :rating)
         @movie = Movie.create safe_movie
