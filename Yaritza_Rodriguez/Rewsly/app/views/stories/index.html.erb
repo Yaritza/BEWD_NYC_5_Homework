@@ -4,7 +4,27 @@
             <h2>Browse the headlines below:</h2>
     </center>
 </div>
+
     <br></br>
+
+<center>
+      <h2>
+                <%= form_tag 'search',  method: :get do %>
+                <%= label_tag 'q', "Search" %>
+                <%= text_field_tag 'q' %>
+                <%= submit_tag 'Search' %>
+                <% end %>
+     </h2>
+</center>
+
+  <center>
+      <h3> Want to contribute to the news bank? <%= link_to "LINK A NEW ARTICLE HERE!", new_story_path %>
+      </h3>
+    </center>
+</div>
+
+<br></br>
+
 <div>
 
         <% @stories.each do |story| %>

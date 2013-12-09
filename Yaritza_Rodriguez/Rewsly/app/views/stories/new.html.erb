@@ -1,0 +1,66 @@
+<center>
+    <h1>
+
+      <div>
+          LINK US TO  A STORY!
+      </div>
+
+    </h1>
+</center>
+
+
+
+<br></br>
+
+
+<div>
+    <center>
+
+
+        <h2>
+            <%= form_for @story do |f|  %>
+            <%= f.label :title %>
+            <%= f.text_field :title %>
+            <%= f.label :link %>
+             <%= f.text_field :link %>
+            <%= f.label :upvotes  %>
+            <%= f.text_field :upvotes  %>
+        </h2>
+
+    </center>
+</div>
+
+      <br></br>
+
+<div>
+    <center>
+          <%= f.submit %>
+          <% end %>
+    </center>
+</div>
+
+
+<div>
+               <% if @story.errors.any? do %>
+
+      <h2>The story could  not save due to the following errors:
+
+                <ul>
+                          <% @story.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                            <% end %>
+              </ul>
+
+     </h2>
+
+                      <% end %>
+                  <% end %>
+</div>
+
+<center>
+     <div>
+
+           <h2><%=link_to "RETURN TO HOME PAGE", root_path %></h2>
+
+      </div>
+</center>

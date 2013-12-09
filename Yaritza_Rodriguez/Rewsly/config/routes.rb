@@ -1,6 +1,9 @@
 Rewsly::Application.routes.draw do
+
  root "stories#index"
- resources :stories
+ resources :stories #only new!
+ get "search", to: "search#index"
+  #add new pg with form to create vs new??
 
 
 

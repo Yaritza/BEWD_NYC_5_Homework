@@ -1,0 +1,24 @@
+<div>
+    <center>
+          <h1>This is what we found:</h1>
+    </center>
+</div>
+
+<div>
+            <% @stories.each do |story| %>
+    <dl>
+           <h2><dt><%= story.title %>:</dt></h2>
+           <h3><dd><%= link_to  story.link, story.link %>.</dd></h3>
+           <h3><dd>Upvotes: <%= story.upvotes %></dd></h3>
+
+    </dl>
+          <br></br>
+</div>
+<% end %>
+
+
+</div>
+
+<center>
+            <h2><%= link_to  "RETURN TO HOMEPAGE", root_path %></h2>
+</center>
