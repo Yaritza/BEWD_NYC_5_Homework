@@ -1,0 +1,24 @@
+<div>
+    <center>
+            <h1>Welcome to Rewsly</h1>
+            <h2>Browse the headlines below:</h2>
+    </center>
+</div>
+    <br></br>
+<div>
+
+        <% @stories.each do |story| %>
+
+        <h2> <%= link_to  story.title, story %> </h2>
+         <% end %>
+
+             <br></br>
+
+
+
+</div>
+
+
+
+<!-- The front page welcomes visitors "Welcome to Rewsly" and list all titles in the stories table.
+Visitors can view a story's upvotes, category and link to more details by clicking on the title from the front page. -->
