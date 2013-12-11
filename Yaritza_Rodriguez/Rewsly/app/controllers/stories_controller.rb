@@ -7,16 +7,28 @@ class StoriesController < ApplicationController
       @story = Story.find params[:id]
   end
 
- # def search
-
-  #end
-
   def create
-    @story = Story.new
+      @story = Story.create safe_story
+
+      if @story.save
+        #puts "Succesfully saved!"
+        redirect_to @story
+
+      else
+        render 'new'
+
+    end
   end
 
   def new
         @story = Story.new
+        #@story.save
+  end
+
+  private
+
+  def safe_story
+    params.require(:story).permit(:title, :category, :link, :upvotes)
   end
 
 end

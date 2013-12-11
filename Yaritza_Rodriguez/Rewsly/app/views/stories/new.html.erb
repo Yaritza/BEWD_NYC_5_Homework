@@ -16,16 +16,19 @@
 <div>
     <center>
 
-
+        <%= form_for @story do |f| %>
         <h2>
-            <%= form_for @story do |f|  %>
-            <%= f.label :title %>
+          <%= f.label :title %>
+        </h2>
             <%= f.text_field :title %>
             <%= f.label :link %>
              <%= f.text_field :link %>
+            <%= f.label :category %>
+             <%= f.text_field :category %>
             <%= f.label :upvotes  %>
             <%= f.text_field :upvotes  %>
-        </h2>
+                  <%= f.submit %>
+        <% end %>
 
     </center>
 </div>
@@ -34,8 +37,7 @@
 
 <div>
     <center>
-          <%= f.submit %>
-          <% end %>
+
     </center>
 </div>
 

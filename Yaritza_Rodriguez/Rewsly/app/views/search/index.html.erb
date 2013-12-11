@@ -8,17 +8,24 @@
             <% @stories.each do |story| %>
     <dl>
            <h2><dt><%= story.title %>:</dt></h2>
-           <h3><dd><%= link_to  story.link, story.link %>.</dd></h3>
+           <h3><dd><%= link_to  story.link, story.link %></dd></h3>
            <h3><dd>Upvotes: <%= story.upvotes %></dd></h3>
-
     </dl>
           <br></br>
 </div>
-<% end %>
+
+          <% if story.title.empty? %>
+          <center>
+                  <h2><%= "There are no stories matching your search" %></h2>
+          </center>
+
+          <% end %>
+
+          <% end %>
 
 
 </div>
 
 <center>
-            <h2><%= link_to  "RETURN TO HOMEPAGE", root_path %></h2>
+            <h2> <%= link_to "Homepage", root_path %> </h2>
 </center>
