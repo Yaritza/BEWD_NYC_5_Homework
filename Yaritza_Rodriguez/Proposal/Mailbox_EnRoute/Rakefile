@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-MailDrop::Application.load_tasks
+MailboxEnroute::Application.load_tasks

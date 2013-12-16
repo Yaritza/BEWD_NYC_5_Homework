@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-MailDrop::Application.config.secret_key_base = '924423428096ee3fbaa16e50d951e6a675fa539eef2df30b48021c5bd41f034e3416d2b307ffab67b3e173fa47f43ed6ca93509f4d3dace7a04289fe1f579300'
+MailboxEnroute::Application.config.secret_key_base = 'ed119eda025bbc1bdac6dfcf65ea4f0e6ebac73836334940336aa1a998dcdb360485747eb6eea10f77562d485c70f3f7c678242a3ab86464b9e40f23c059ef4f'

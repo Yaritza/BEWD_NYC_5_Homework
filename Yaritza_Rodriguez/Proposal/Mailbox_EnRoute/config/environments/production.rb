@@ -1,4 +1,4 @@
-MailDrop::Application.configure do
+MailboxEnroute::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
