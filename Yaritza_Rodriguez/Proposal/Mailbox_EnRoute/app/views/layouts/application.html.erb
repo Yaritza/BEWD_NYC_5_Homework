@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MailboxEnroute</title>
+  <title>Mailbox En Route</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+    <%if notice %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
+  <%if alert %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
+
+<% if user_signed_in? %>
+Welcome, <%= current_user.email %>! <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+<% else %>
+<h3><%= link_to "Sign Up", new_user_registration_path %> *** <%= link_to "Sign in", new_user_session_path %></h3>
+<% end %>
+
 
 <%= yield %>
 

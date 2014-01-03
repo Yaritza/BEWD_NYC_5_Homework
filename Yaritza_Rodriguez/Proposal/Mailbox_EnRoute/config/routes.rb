@@ -1,6 +1,10 @@
 MailboxEnroute::Application.routes.draw do
-  get "/search", to: "search#index"
-  root 'mailboxes#index'
+devise_for :users, path_names: {sign_in: 'login', sign_out: 'logout'}
+get "/search", to: "search#index"
+root 'mailboxes#index'
+resources :mailboxes
+#REMEMBER TO LIMIT RESOURCES ONLY TO WHAT'S APPLICABLE
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
