@@ -1,6 +1,6 @@
  <center>
-<h1>Mailboxes en Route</h1>
-<h2>Locate USPS mailboxes near you, or on your way to your final destination.</h2>
+<h1>Find a Mailbox </h1>
+<h2>Locate USPS mailboxes near you.</h2>
 
 <br></br>
 
@@ -8,28 +8,26 @@
 
 <h2>
 <%= form_tag '/search', method: :get do %>
-    <%= label_tag 'q start', "Search near:" %>
-    <%= text_field_tag 'q end' %> <%= check_box_tag 'current location', 'current location' %>
+    <%= label_tag 'q ', "Search near:" %>
+    <%= text_field_tag 'q' %> <%= check_box_tag 'current location', 'current location' %>
     <%= submit_tag 'search'%>
     <% end %>
-
-    <!-- ### Add JavaScript-- Add prompt to "enter address" on all form fields -->
-  </h2>
+<!-- <!-- inital code from here below -->
+    <!-- ### Add JavaScript-- Add prompt to "enter address" on all form fields
 <br></br>
 <div>
   <h2>OR search along a route</h2>
 </div>
-<br></br>
-  <h2><%= form_tag 'search_path', method: :get do %>
+<br></br>-->
+  <!-- <h2><%= form_tag 'search_path', method: :get do %>
     <%= label_tag 'q', "Starting location:" %>
     <%= text_field_tag 'q' %> <%= check_box_tag 'current location', 'current location' %>
     <%= label_tag 'q', "End destination:" %>
     <%= text_field_tag 'q' %>
 
     <%= submit_tag 'search' %>
-    <% end %>
-    </h2>
+    <% end %> -->
 
 
    </center>
-</bodys
+</body>

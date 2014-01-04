@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140102172207) do
+ActiveRecord::Schema.define(version: 20140103002149) do
 
   create_table "mailboxes", force: true do |t|
     t.string   "address"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20140102172207) do
     t.string   "collection_day"
     t.string   "collection_time"
     t.string   "state"
+    t.text     "collection_hours"
   end
 
   create_table "users", force: true do |t|
